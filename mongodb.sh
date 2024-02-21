@@ -2,7 +2,7 @@ yum install mongodb-org -y
 
 cp mongodb.conf /etc/yum.repos.d/mongodb.repo
 
-systemctl enable mongodb
-systemctl start mongodb
+systemctl enable mongod
+systemctl start mongod
 
-# Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongod.repo
+# Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongodb.repo
