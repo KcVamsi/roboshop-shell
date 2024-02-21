@@ -1,0 +1,1 @@
+# if we dont run as a root user then it should say us to run as the root user, for that we will develop script
