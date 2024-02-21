@@ -1,7 +1,6 @@
-dnf module disable nodejs -y
-dnf module enable nodejs:18 -y
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
-dnf install nodejs -y
+yum install nodejs -y
 
 useradd roboshop
 
@@ -11,7 +10,6 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 cd /app 
 unzip /tmp/catalogue.zip
 
-cd /app 
 npm install 
 
 cp catalogue.service /etc/systemd/system/catalogue.service
@@ -25,4 +23,4 @@ cp mongodb.repo /etc/yum.repos.d/mongodb.repo
 
 dnf install mongodb-org-shell -y
 
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongo --host mongodb.kcdevopsdomain.online </app/schema/catalogue.js
