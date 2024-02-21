@@ -1,6 +1,6 @@
 yum install mongodb-org -y 
 
-cp mongodb.conf /etc/yum.repos.d/mongodb.repo
+cp mongodb.repo /etc/yum.repos.d/mongodb.repo
 
 systemctl enable mongod
 systemctl start mongod
