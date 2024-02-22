@@ -1,0 +1,12 @@
+[Unit]
+Description = Cart Service
+[Service]
+cart=roboshop
+Environment=REDIS_HOST=redis.kcdevopsdomain.online
+Environment=CATALOGUE_HOST=catalogue.kcdevopsdomain.online
+Environment=CATALOGUE_PORT=8080
+ExecStart=/bin/node /app/server.js
+SyslogIdentifier=cart
+
+[Install]
+WantedBy=multi-cart.target
